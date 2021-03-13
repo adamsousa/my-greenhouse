@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!-- Secondary Colors -->
+    <color name="bluePale">#F2F2F8</color>
+    <color name="green">#50BC76</color>
+    <color name="greenDark">#3EA261</color>
+    <color name="greenLime">#84C441</color>
+    <color name="turquoise">#60C4B6</color>
+    <color name="blueLight">#559ED6</color>
+    <color name="yellow">#FBDA61</color>
+    <color name="orange">#F76B1C</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="black">#333333</color>
+    <color name="gray">#666666</color>
+    <color name="grayLight">#ACACAC</color>
+    <color name="whiteDark">#D1D0D0</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="grayDark">#FF424242</color>
+    <color name="sectionLightGray">#E0E0E0</color>
+
+</resources>

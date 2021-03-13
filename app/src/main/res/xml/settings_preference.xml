@@ -1,0 +1,19 @@
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false"
+        app:key="@string/key_plant_notifications"
+        app:summary="Receive warnings on your plants current condition (Ex: Moisture level, Sunlight level, etc.)"
+        app:title="Plant Care Warning Notification" />
+
+    <Preference
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false"
+        app:key="@string/key_app_version"
+        app:title="App Version" />
+
+    <PreferenceCategory/>
+
+</androidx.preference.PreferenceScreen>

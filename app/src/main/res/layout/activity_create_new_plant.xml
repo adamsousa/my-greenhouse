@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/name_edit_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/name_text_view_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Plant Name:"
+                    android:textColor="@color/black"
+                    android:textSize="21sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/ic_background_round"
+                    android:foreground="@drawable/ic_selectable_background_rounded"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/name_text_view_label">
+
+                    <EditText
+                        android:id="@+id/name_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="top"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapSentences"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/device_id_edit_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_edit_text_view"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/device_id_text_view_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Device Id:"
+                    android:textColor="@color/black"
+                    android:textSize="21sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/ic_background_round"
+                    android:foreground="@drawable/ic_selectable_background_rounded"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/device_id_text_view_label">
+
+                    <EditText
+                        android:id="@+id/device_id_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="top"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapSentences"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/plant_image_view_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/device_id_edit_text_view">
+
+                <ImageView
+                    android:id="@+id/plant_image_view"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/ic_background_round"
+                    android:layout_margin="16dp" />
+
+                <ImageButton
+                    android:id="@+id/plant_image_add_button"
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="26dp"
+                    android:padding="16dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_camera_alt_black_24dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/moisture_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/plant_image_view_layout">
+
+                <TextView
+                    android:id="@+id/moisture_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Moisture Set Points"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/moisture_min"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/moisture_label"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="16dp"
+                    android:hint="Min*"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/moisture_max"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/moisture_label"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="16dp"
+                    android:hint="Max*"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/temperature_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/moisture_layout">
+
+                <TextView
+                    android:id="@+id/temperature_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Temperature Set Points (°F)"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/temperature_min"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/temperature_label"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="16dp"
+                    android:hint="Min*"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/temperature_max"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/temperature_label"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="16dp"
+                    android:hint="Max*"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/humidity_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/temperature_layout">
+
+                <TextView
+                    android:id="@+id/humidity_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Humidity Set Points"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/humidity_min"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/humidity_label"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="16dp"
+                    android:hint="Min*"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/humidity_max"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/humidity_label"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="16dp"
+                    android:hint="Max*"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sunlight_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/humidity_layout">
+
+                <TextView
+                    android:id="@+id/sunlight_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="Sunlight Set Points"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/sunlight_min"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sunlight_label"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="16dp"
+                    android:hint="Min*"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/sunlight_max"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sunlight_label"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="16dp"
+                    android:hint="Max*"
+                    android:inputType="number"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.adamsousa.mygreenhouse">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.SplashScreenActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.BaseNavigationActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".ui.saveForms.SaveLocationActivity"
+            android:label="Create New Location"
+            android:parentActivityName=".ui.BaseNavigationActivity" />
+        <activity
+            android:name=".ui.saveForms.SavePlantActivity"
+            android:label="Create New Plant"
+            android:parentActivityName=".ui.BaseNavigationActivity" />
+        <activity
+            android:name=".ui.PictureCaptureActivity"
+            android:parentActivityName=".ui.BaseNavigationActivity" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.adamsousa.mygreenhouse.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name="com.adamsousa.mygreenhouse.custom.PlantCareJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+    </application>
+
+</manifest>

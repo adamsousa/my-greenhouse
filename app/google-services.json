@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "986942058620",
+    "firebase_url": "https://boreal-card-247214.firebaseio.com",
+    "project_id": "boreal-card-247214",
+    "storage_bucket": "boreal-card-247214.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986942058620:android:4830acde1553fd73",
+        "android_client_info": {
+          "package_name": "com.adamsousa.mygreenhouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986942058620-a502sahsa3th2tott8disfuc9tse2ce6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGE3-qGO1Ju9OxKdT3AablygNM55NWEn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986942058620-a502sahsa3th2tott8disfuc9tse2ce6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
